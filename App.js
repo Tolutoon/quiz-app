@@ -1,13 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native'
+import MyStack from './navigation'
 import Home from './screens/home';
 import Quiz from './screens/quiz';
+import Result from './screens/result'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* <Home /> */}
-      <Quiz />
-    </View>
+      <NavigationContainer>
+        <MyStack/>
+      </NavigationContainer>
   );
 }
 

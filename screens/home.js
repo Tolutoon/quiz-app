@@ -3,7 +3,7 @@ import React from 'react';
 import Title from '../components/Title';
 import Img from '../assets/Home-image.png';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View>
         <Title/>
@@ -13,7 +13,7 @@ const Home = () => {
             resizeMode='cover'
             />
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Quiz')}>
             <Text>Start</Text>
         </TouchableOpacity>
     </View>
