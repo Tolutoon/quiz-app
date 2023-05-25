@@ -22,12 +22,15 @@ const Quiz = ({navigation}) => {
         </TouchableOpacity>
       </View>
       <View style={styles.bottom}>
-        <TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
           <Text>SKIP</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=>navigation.navigate('Result')}>
+        <TouchableOpacity style={styles.button}>
           <Text>NEXT</Text>
         </TouchableOpacity>
+        {/* <TouchableOpacity onPress={()=>navigation.navigate('Result')}>
+          <Text>END</Text>
+  </TouchableOpacity> */}
       </View>
     </View>
   )
@@ -37,8 +40,9 @@ export default Quiz
 
 const styles = StyleSheet.create({
   container: {
-    padding: 12,
-    height: '100%',
+        paddingTop: 50,
+        paddingHorizontal: 20,
+        height: '100%'
   },
   top: {
     marginVertical: 16,
